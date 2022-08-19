@@ -1,4 +1,5 @@
-export const RECORDS: object[] =  [
+import {RECORD} from "./interfaces/Record";
+export const Records: RECORD[] =  [
     {
       _id: '62f0fd7d8b8a4bef6a3f3c3d',
       appUser: '62cc0f0e255dc4bfa2fdb16b',
