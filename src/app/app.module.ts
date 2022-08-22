@@ -7,6 +7,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { ModifyButtonComponent } from './components/modify-button/modify-button.component';
 import { RecordItemComponent } from './components/record-item/record-item.component';
 import { RecordsListComponent } from './components/records-list/records-list.component';
+import { RecordsTableComponent } from './components/records-table/records-table.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 @NgModule({
@@ -16,10 +20,14 @@ import { RecordsListComponent } from './components/records-list/records-list.com
     ModifyButtonComponent,
     RecordItemComponent,
     RecordsListComponent,
+    RecordsTableComponent,
   ],
   imports: [
     BrowserModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [AppComponent]
