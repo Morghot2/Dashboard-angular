@@ -17,7 +17,7 @@ export class RecordsTableComponent implements AfterViewInit {
   dataSource: RecordsTableDataSource;
 
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
-  displayedColumns = ['id', 'name'];
+  displayedColumns = ['firstName', 'lastName', 'email', 'age', 'photo', 'edit', 'delete'];
 
   constructor() {
     this.dataSource = new RecordsTableDataSource();
