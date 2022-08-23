@@ -1,5 +1,5 @@
 import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
-
+import {MatButtonModule} from '@angular/material/button';
 @Component({
   selector: 'app-modify-button',
   templateUrl: './modify-button.component.html',
