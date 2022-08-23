@@ -13,6 +13,11 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { ModalComponent } from './components/modal/modal.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegistrationComponent } from './components/registration/registration.component';
+import { MatDialogModule } from '@angular/material/dialog';
+import { RecordFormComponent } from './components/record-form/record-form.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +27,11 @@ import { MatButtonModule } from '@angular/material/button';
     RecordItemComponent,
     RecordsListComponent,
     RecordsTableComponent,
+    ModalComponent,
+    LoginComponent,
+    RegistrationComponent,
+    RecordFormComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -31,6 +41,8 @@ import { MatButtonModule } from '@angular/material/button';
     MatSortModule,
     MatButtonModule,
     MatIconModule,
+    MatDialogModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
