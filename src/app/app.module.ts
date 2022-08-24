@@ -18,6 +18,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RecordFormComponent } from './components/record-form/record-form.component';
+import {RecordFormService} from './shared/record-form.service';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,7 @@ import { RecordFormComponent } from './components/record-form/record-form.compon
     MatDialogModule,
 
   ],
-  providers: [],
+  providers: [RecordFormService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
