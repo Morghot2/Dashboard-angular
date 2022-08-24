@@ -19,7 +19,11 @@ import { RegistrationComponent } from './components/registration/registration.co
 import { MatDialogModule } from '@angular/material/dialog';
 import { RecordFormComponent } from './components/record-form/record-form.component';
 import {RecordFormService} from './shared/record-form.service';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import { MatOptionModule } from '@angular/material/core';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,6 +36,7 @@ import {RecordFormService} from './shared/record-form.service';
     LoginComponent,
     RegistrationComponent,
     RecordFormComponent,
+
     
   ],
   imports: [
@@ -43,6 +48,12 @@ import {RecordFormService} from './shared/record-form.service';
     MatButtonModule,
     MatIconModule,
     MatDialogModule,
+    ReactiveFormsModule,
+    MatGridListModule,
+    MatGridListModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatOptionModule
 
   ],
   providers: [RecordFormService],

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { RecordFormService } from 'src/app/shared/record-form.service';
+import { RecordFormService } from '../../shared/record-form.service';
+
 @Component({
   selector: 'app-record-form',
   templateUrl: './record-form.component.html',
@@ -7,9 +8,12 @@ import { RecordFormService } from 'src/app/shared/record-form.service';
 })
 export class RecordFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(public service: RecordFormService) { }
 
   ngOnInit(): void {
+  }
+  onClear() {
+    this.service.form.reset();
   }
 
 }
