@@ -14,6 +14,7 @@ export class RecordFormComponent implements OnInit {
   }
   onClear() {
     this.service.form.reset();
+    this.service.initializeFormGroup();
   }
 
 }
