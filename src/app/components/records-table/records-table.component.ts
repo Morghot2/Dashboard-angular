@@ -3,8 +3,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTable } from '@angular/material/table';
 import { RecordsTableDataSource } from './records-table-datasource';
+import { MatDialog, MatDialogConfig } from '@angular/material/dialog';
 
 import {RECORD} from 'src/app/interfaces/Record'
+import { RecordFormComponent } from '../record-form/record-form.component';
 
 @Component({
   selector: 'app-records-table',
@@ -20,7 +22,7 @@ export class RecordsTableComponent implements AfterViewInit {
   /** Columns displayed in the table. Columns IDs can be added, removed, or reordered. */
   displayedColumns = ['firstName', 'lastName', 'email', 'age', 'photo', 'edit', 'delete'];
 
-  constructor() {
+  constructor(public dialog: MatDialog) {
     this.dataSource = new RecordsTableDataSource();
   }
 
@@ -28,5 +30,13 @@ export class RecordsTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
     this.dataSource.paginator = this.paginator;
     this.table.dataSource = this.dataSource;
+  }
+  onCreate()  {
+    
+    const dialogConfig = new MatDialogConfig();
+
+    dialogConfig.autoFocus = true;
+    dialogConfig.width = '60%';
+    this.dialog.open(RecordFormComponent, dialogConfig)
   }
 }

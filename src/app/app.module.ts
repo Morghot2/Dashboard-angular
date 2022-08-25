@@ -54,5 +54,6 @@ import { MatOptionModule } from '@angular/material/core';
   ],
   providers: [RecordFormService],
   bootstrap: [AppComponent],
+  entryComponents: [RecordFormComponent]
 })
 export class AppModule {}
