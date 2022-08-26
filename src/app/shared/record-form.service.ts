@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import * as _ from "lodash"
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 export class RecordFormService {
   constructor() {}
   form: FormGroup = new FormGroup({
-    id: new FormControl(null),
+    _id: new FormControl(null),
     firstName: new FormControl('', Validators.required),
     lastName: new FormControl(''),
     email: new FormControl('', [Validators.email, Validators.required]),
@@ -15,11 +16,15 @@ export class RecordFormService {
   });
   initializeFormGroup() {
     this.form.setValue({
-      id: null,
+      _id: null,
       firstName: '',
       lastName: '',
       email: '',
       age: null
     });
   }
+  populateForm(record: object) {
+    this.form.setValue(_.omit(record,['appUser', 'photo', 'createdAt', 'updatedAt', '__v']));
+  }
+
 }
