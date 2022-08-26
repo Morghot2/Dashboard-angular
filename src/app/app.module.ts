@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -16,12 +17,20 @@ import { LoginComponent } from './components/login/login.component';
 import { RegistrationComponent } from './components/registration/registration.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { RecordFormComponent } from './components/record-form/record-form.component';
-import {RecordFormService} from './shared/record-form.service';
+import { RecordFormService } from './shared/record-form.service';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatInputModule} from '@angular/material/input';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
+import { MainPageComponent } from './components/main-page/main-page.component';
+
+const appRoutes: Routes = [
+  { path: '', component: MainPageComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'registration', component: RegistrationComponent },
+];
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,8 +41,7 @@ import { MatOptionModule } from '@angular/material/core';
     LoginComponent,
     RegistrationComponent,
     RecordFormComponent,
-
-    
+    MainPageComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,11 +57,11 @@ import { MatOptionModule } from '@angular/material/core';
     MatGridListModule,
     MatFormFieldModule,
     MatInputModule,
-    MatOptionModule
-
+    MatOptionModule,
+    RouterModule.forRoot(appRoutes, {enableTracing: true}),
   ],
   providers: [RecordFormService],
   bootstrap: [AppComponent],
-  entryComponents: [RecordFormComponent]
+  entryComponents: [RecordFormComponent],
 })
 export class AppModule {}
