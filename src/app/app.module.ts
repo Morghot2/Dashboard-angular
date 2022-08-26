@@ -24,6 +24,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatOptionModule } from '@angular/material/core';
 import { MainPageComponent } from './components/main-page/main-page.component';
+import {MatCardModule} from '@angular/material/card';
 
 const appRoutes: Routes = [
   { path: '', component: MainPageComponent },
@@ -41,7 +42,7 @@ const appRoutes: Routes = [
     LoginComponent,
     RegistrationComponent,
     RecordFormComponent,
-    MainPageComponent,
+    MainPageComponent
   ],
   imports: [
     BrowserModule,
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     MatFormFieldModule,
     MatInputModule,
     MatOptionModule,
+    MatCardModule,
     RouterModule.forRoot(appRoutes, {enableTracing: true}),
   ],
   providers: [RecordFormService],

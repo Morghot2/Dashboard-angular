@@ -69,10 +69,51 @@ mat-footer-row mat-footer-cell {
   width: 32px;
 }
 
-/* for dialog pop-up */
 .btn-dialog-close {
   width: 45px;
   min-width: 0px !important;
   height: 40px;
   padding: 0px !important;
+}
+mat-card {
+  max-width: 600px;
+  margin: 2em auto;
+  text-align: center;
+  max-height: 600px;
+  border: 1px solid black;
+}
+
+.header {
+  text-align: center;
+}
+.full-width {
+  width: 80%;
+}
+
+.button-row {
+  padding-top: 5px;
+}
+
+.button-row a {
+  margin-right: 8px;
+  text-align: center;
+}
+
+.forget-password {
+  padding-left: 0px;
+}
+
+.emailInput {
+  padding-top: 10px;
+}
+
+.contentBody {
+  padding: 60px 1rem;
+  background: #1b6ca8;
+  display: block;
+}
+
+.aLink {
+  float: left;
+  text-decoration: none;
 }
